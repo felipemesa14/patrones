@@ -10,7 +10,8 @@ include "FactoryMethod.php";
  */
 try {
 
-    $typeMethod = $_GET["typeMethod"];
+    echo "\nEnter your payment Method:\n";
+    $typeMethod  = readline();
 
     if ($typeMethod == "pse" || $typeMethod == "amex" || $typeMethod == "visa") {
         $paymentMethod = FactoryMethod::create($typeMethod);
